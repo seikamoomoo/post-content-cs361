@@ -1,4 +1,2 @@
 # post-content-cs361
-content posting stuff
-ll
-l;
+Below are the spikes that we used:

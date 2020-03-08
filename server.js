@@ -4,7 +4,7 @@ var fs = require ('fs');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var express = require('express');
-const port = process.env.PORT||3000;
+const port = process.env.PORT||8080;
 var app = express();
 app.use(bodyParser.json());
 app.use(express.static('public'));
@@ -23,7 +23,7 @@ app.get('', function (req, res, next) {
 
 app.post('/add', function (req, res, next) {
 	console.log(req.body);
-  
+
 	reviewData.push({
 		title: req.body.title,
 		bodytext: req.body.bodytext,

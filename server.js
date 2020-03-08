@@ -14,6 +14,7 @@ app.set('view engine', 'handlebars');
 var postData = require('./posts');
 
 app.get('', function (req, res, next) {
+  console.log(postData);
 	res.status(200).render('index', {
 		postData: postData
 	});

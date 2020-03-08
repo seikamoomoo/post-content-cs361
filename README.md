@@ -16,6 +16,12 @@ notes:
   - javascript for:
     - modal functionality
     - create and display post
-    
-    
+
+To run:
+  open the files in a github repositority in your pc,
+  go to the file in your pc command prompt
+  type in: node server.js
+  press enter
+  go to a browser and type in localhost:3000 
+
 Below are the spikes that we used:

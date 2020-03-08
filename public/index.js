@@ -1,4 +1,3 @@
-
 var backdrop = document.getElementById('modal-backdrop');
 var modal = document.getElementById('post-content-modal');
 var addpost = document.getElementById('make-post-button');
@@ -62,6 +61,7 @@ modalcancel.addEventListener('click', function(event){
 makepost.addEventListener('click', function(event){
  if(parameters()){
    createpost();
+   //code from here to next comment is server part
    var postRequest = new XMLHttpRequest();
    var requestURL = '/add';
    postRequest.open('POST', requestURL);
@@ -74,6 +74,8 @@ makepost.addEventListener('click', function(event){
    postRequest.addEventListener('load', function (event) {
    });
    postRequest.send(requestBody);
+   console.log('sent to database');
+   //End of server part
    hide();
  }
  else{

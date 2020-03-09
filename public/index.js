@@ -60,6 +60,7 @@ modalcancel.addEventListener('click', function(event){
   hide();
 })
 makepost.addEventListener('click', function(event){
+  console.log('wow');
  if(parameters()){
    createpost();
    //code from here to next comment is server part

@@ -7,7 +7,7 @@ var express = require('express');
 const port = process.env.PORT||3000;
 var app = express();
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
@@ -33,7 +33,7 @@ app.post('/add', function (req, res, next) {
   console.log(postData);
 	fs.writeFile(
 		__dirname + '/posts.json',
-		JSON.stringify(postData, 2, null),
+		JSON.stringify(postData, 2, 2),
 		function (err) {
 			if (!err) {
 			res.status(200).send();

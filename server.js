@@ -14,6 +14,7 @@ app.set('view engine', 'handlebars');
 var postData = require('./posts');
 
 app.get('', function (req, res, next) {
+  console.log(postData);
 	res.status(200).render('index', {
 		postData: postData
 	});
@@ -23,12 +24,13 @@ app.get('', function (req, res, next) {
 
 app.post('/add', function (req, res, next) {
 	console.log(req.body);
-  
-	reviewData.push({
+  console.log(postData);
+	postData.push({
 		title: req.body.title,
 		bodytext: req.body.bodytext,
 		url: req.body.url,
 	  });
+  console.log(postData);
 	fs.writeFile(
 		__dirname + '/posts.json',
 		JSON.stringify(postData, 2, null),

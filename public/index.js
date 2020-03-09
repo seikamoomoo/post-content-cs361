@@ -17,15 +17,16 @@ console.log(body_input);
 
   url.value = group_input.value = title_input.value = body_input.value = '';
 }
-function unhide(){
-  remove();
-  backdrop.classList.remove('hidden');
-  modal.classList.remove('hidden');
-}
 
 function hide(){
-  backdrop.classList.add('hidden');
-  modal.classList.add('hidden');
+  remove();
+  backdrop.classList.toggle('hidden');
+  modal.classList.toggle('hidden');
+}
+
+function unhide(){
+  backdrop.classList.toggle('hidden');
+  modal.classList.toggle('hidden');
 }
 
 function parameters(){

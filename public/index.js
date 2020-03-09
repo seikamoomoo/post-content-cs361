@@ -17,13 +17,13 @@ console.log(body_input);
 
   url.value = group_input.value = title_input.value = body_input.value = '';
 }
-function hide(){
+function unhide(){
   remove();
   backdrop.classList.remove('hidden');
   modal.classList.remove('hidden');
 }
 
-function unhide(){
+function hide(){
   backdrop.classList.add('hidden');
   modal.classList.add('hidden');
 }
@@ -36,17 +36,17 @@ function parameters(){
 }
 
 function createpost(){
-var temp;
-var newnode = posts[posts.length-1].cloneNode(true);
-temp = newnode.getElementsByClassName('post-title');
-temp[0].textContent = title_input.value;
-temp = newnode.getElementsByClassName('post-group');
-temp[0].textContent = group_input.value;
-temp = newnode.getElementsByClassName('post-body');
-temp[0].textContent = body_input.value;
-temp = newnode.getElementsByClassName('post-image');
-temp[0].setAttribute('src', url.value);
-posts[0].parentNode.appendChild(newnode);
+  var temp;
+  var newnode = posts[posts.length-1].cloneNode(true);
+  temp = newnode.getElementsByClassName('post-title');
+  temp[0].textContent = title_input.value;
+  temp = newnode.getElementsByClassName('post-group');
+  temp[0].textContent = group_input.value;
+  temp = newnode.getElementsByClassName('post-body');
+  temp[0].textContent = body_input.value;
+  temp = newnode.getElementsByClassName('post-image');
+  temp[0].setAttribute('src', url.value);
+  posts[0].parentNode.appendChild(newnode);
 }
 
 addpost.addEventListener('click', function(event){

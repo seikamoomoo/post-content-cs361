@@ -63,6 +63,20 @@ html {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * Modal stuff
  */
@@ -82,16 +96,102 @@ html {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  width: 500px;
+  padding: 5px;
   z-index: 1010;
   background-color: rgba(255, 255, 255, 255);
-  border-radius: 15px 15px 30px 30px;
+  border-radius: 15px 15px 15px 15px;
 }
 
 .hidden {
   display: none;
 }
 
+.modal-dialog {
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
+  /* margin: 40px auto; */
+  background-color: #B8DDE1;
+  border-radius: 15px;
+}
+
+.modal-header {
+  position: relative;
+  padding: 20px;
+  font-family: Montserrat;
+  color: #D73F09;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 28px;
+}
+
+#modal-close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.input-element {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.input-element > label {
+  font-family: 'Montserrat', sans-serif;
+  color: #0D5257;
+  font-weight: 600;
+  flex: 1 75px;
+  margin-right: 10px;
+}
+
+.input-element input {
+  flex: 6 200px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+  height: 15px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 20px 10px;
+}
+
+#modal-cancel,
+#modal-accept {
+  margin-right: 20px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: #FDD26E;
+  background-color: #D73F09;
+  border: 0;
+  height: 40px;
+  border-radius: 5px;
+}
+
+#modal-cancel:hover, #modal-accept:hover {
+  cursor: pointer;
+  color: #D73F09;
+  background-color: #FDD26E;
+}
+
+/*
 .modal-title {
   position: inline-block;
   margin-top: 10px;
@@ -133,7 +233,6 @@ html {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0%);
-  /* height: 40px; */
 }
 
 .modal-body input {
@@ -143,7 +242,7 @@ html {
   height: 40px;
   transform: translate(-50%, 0%);
 }
-  
+
 .modal-dialog {
   width: auto;
   max-width: 600px;
@@ -152,7 +251,7 @@ html {
   margin: 40px auto;
   background-color: #fff;
   border-radius: 15px;
-}
+} */
 
 
 

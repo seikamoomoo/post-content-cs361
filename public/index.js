@@ -61,14 +61,7 @@ modalcancel.addEventListener('click', function(event){
 makepost.addEventListener('click', function(event){
  if(parameters()){
    createpost();
-<<<<<<< HEAD
-<<<<<<< HEAD
-   //code from here to next comment is server part
-=======
->>>>>>> f403116793fbf6dbc82400443d5342fd569b7ad2
-=======
-   //code from here to next comment is server part
->>>>>>> me
+
    var postRequest = new XMLHttpRequest();
    var requestURL = '/add';
    postRequest.open('POST', requestURL);
@@ -81,15 +74,8 @@ makepost.addEventListener('click', function(event){
    postRequest.addEventListener('load', function (event) {
    });
    postRequest.send(requestBody);
-<<<<<<< HEAD
-<<<<<<< HEAD
-   //End of server part
-=======
->>>>>>> f403116793fbf6dbc82400443d5342fd569b7ad2
-=======
+
    console.log('sent to database');
-   //End of server part
->>>>>>> me
    hide();
  }
  else{

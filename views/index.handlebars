@@ -1,15 +1,13 @@
 <main class="content">
   <section id="display-posts">
     <div id="posts">
-      <div class="post">
-        {{#each postData}}
-            {{> posts}}
-        {{/each}}
-
-
+      {{#each postData}}
+          {{> posts}}
+      {{/each}}
     </div>
   </section>
 <button type="button" id="make-post-button"><i>Add Post</i></button>
+
 
 <div id="modal-backdrop" class="hidden"></div>
 <div id="post-content-modal" class="hidden">
@@ -36,11 +34,7 @@
         <label for="image-input">Image URL</label>
         <input type="text" id="image-input">
       </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
-      <button type="button" id="modal-accept" class="action-button">Post</button>
-    </div>
 
+    </div>
   </div>
 </div>

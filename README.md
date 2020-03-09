@@ -1,5 +1,18 @@
 # post-content-cs361
 
+## usage
+- clone repository
+- install node.js project dependencies
+```bash
+$ npm install
+```
+- start the server application
+```bash
+$ npm start
+```
+- server will be hosted on the displayed port (default 3000)
+- connect to server on any major browser at "http://127.0.0.1:3000" or "http://localhost:3000"
+
 unit tests:
  - server is running
  - content is displayed

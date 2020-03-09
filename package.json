@@ -1,0 +1,29 @@
+{
+  "name": "post-content-cs361",
+  "version": "1.0.0",
+  "description": "content posting stuff",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"No need to test, it's perfect...\"",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seikamoomoo/post-content-cs361.git"
+  },
+  "author": "Seika & Jonathan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seikamoomoo/post-content-cs361/issues"
+  },
+  "homepage": "https://github.com/seikamoomoo/post-content-cs361#readme"
+}

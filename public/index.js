@@ -37,17 +37,17 @@ function parameters(){
 }
 
 function createpost(){
-  var temp;
-  var newnode = posts[posts.length-1].cloneNode(true);
-  temp = newnode.getElementsByClassName('post-title');
-  temp[0].textContent = title_input.value;
-  temp = newnode.getElementsByClassName('post-group');
-  temp[0].textContent = group_input.value;
-  temp = newnode.getElementsByClassName('post-body');
-  temp[0].textContent = body_input.value;
-  temp = newnode.getElementsByClassName('post-image');
-  temp[0].setAttribute('src', url.value);
-  posts[0].parentNode.appendChild(newnode);
+var temp;
+var newnode = posts[posts.length-1].cloneNode(true);
+temp = newnode.getElementsByClassName('post-title');
+temp[0].textContent = title_input.value;
+temp = newnode.getElementsByClassName('post-group');
+temp[0].textContent = group_input.value;
+temp = newnode.getElementsByClassName('post-body');
+temp[0].textContent = body_input.value;
+temp = newnode.getElementsByClassName('post-image');
+temp[0].setAttribute('src', url.value);
+posts[0].parentNode.appendChild(newnode);
 }
 
 addpost.addEventListener('click', function(event){
@@ -62,7 +62,7 @@ modalcancel.addEventListener('click', function(event){
 makepost.addEventListener('click', function(event){
  if(parameters()){
    createpost();
-
+   //code from here to next comment is server part
    var postRequest = new XMLHttpRequest();
    var requestURL = '/add';
    postRequest.open('POST', requestURL);
@@ -75,8 +75,8 @@ makepost.addEventListener('click', function(event){
    postRequest.addEventListener('load', function (event) {
    });
    postRequest.send(requestBody);
-
    console.log('sent to database');
+   //End of server part
    hide();
  }
  else{

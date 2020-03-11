@@ -5,10 +5,12 @@ var title_input = document.getElementById('title-input');
 var group_input = document.getElementById('group-input');
 var body_input = document.getElementById('body-input');
 var url = document.getElementById('image-input');
+var nsfw = document.getElementById('nsfw');
 var modalcancel = document.getElementById('modal-cancel');
 var modalclose = document.getElementById('modal-close');
 var makepost = document.getElementById('modal-accept');
 var posts = document.getElementsByClassName('post');
+
 function remove(){
 console.log(group_input);
 console.log(title_input);
@@ -16,6 +18,7 @@ console.log(url);
 console.log(body_input);
 
   url.value = group_input.value = title_input.value = body_input.value = '';
+  nsfw.checked = false;
 }
 
 function hide(){
@@ -30,8 +33,14 @@ function unhide(){
 }
 
 function parameters(){
- if(group_input.value=='' || body_input.value =='' || url.value=='' || title_input.value==''){
+ if(group_input.value=='' || body_input.value =='' || title_input.value==''){
    return false;
+ }
+ if(nsfw.checked === true) {
+   nsfw.value = 'Tagged as NSFW';
+ }
+ else {
+   nsfw.value = ''
  }
  return true;
 }
@@ -39,6 +48,8 @@ function parameters(){
 function createpost(){
 var temp;
 var newnode = posts[posts.length-1].cloneNode(true);
+temp = newnode.getElementsByClassName('nsfw-tag');
+temp[0].textContent = nsfw.value;
 temp = newnode.getElementsByClassName('post-title');
 temp[0].textContent = title_input.value;
 temp = newnode.getElementsByClassName('post-group');
@@ -71,6 +82,7 @@ makepost.addEventListener('click', function(event){
      title: title_input.value,
      bodytext: body_input.value,
      url: url.value,
+     nsfw: nsfw.value,
    });
    postRequest.setRequestHeader('Content-Type', 'application/json');
    postRequest.addEventListener('load', function (event) {

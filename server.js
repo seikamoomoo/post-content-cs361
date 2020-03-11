@@ -26,7 +26,9 @@ app.post('/add', function (req, res, next) {
 	console.log(req.body);
   console.log(postData);
 	postData.push({
+    nsfw: req.body.nsfw,
 		title: req.body.title,
+    group: req.body.group,
 		bodytext: req.body.bodytext,
 		url: req.body.url,
 	  });

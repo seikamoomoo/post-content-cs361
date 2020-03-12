@@ -20,7 +20,12 @@ app.get('', function (req, res, next) {
 	});
 });
 
-
+app.get('/account', function (req, res, next) {
+  // console.log(postData);
+	res.status(200).render('account', {
+		postData: postData
+	});
+});
 
 app.post('/add', function (req, res, next) {
 	console.log(req.body);

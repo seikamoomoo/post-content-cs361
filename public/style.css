@@ -10,7 +10,7 @@ header {
    margin: 0;
  }
 
- .site-title a{
+.site-title a{
    font-family: 'Montserrat', sans-serif;
    font-size: 50px;
    font-weight: bold;
@@ -21,6 +21,21 @@ header {
 .site-title {
   margin-top: 20px;
   margin-left: 18px;
+}
+
+.account a{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   color: #FDD26E;
+   text-decoration: none;
+}
+
+.account {
+  /* position: absolute; */
+  margin-top: 40px;
+  margin-right: 18px;
+  margin-left: auto;
 }
 
 .content {
@@ -100,7 +115,7 @@ header {
 /*============
 MODAL STYLING
 =============*/
-#modal-backdrop {
+#modal-backdrop, #modal-backdrop-a {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -110,7 +125,7 @@ MODAL STYLING
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-#post-content-modal {
+#post-content-modal, #parental-controls-modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -144,7 +159,7 @@ MODAL STYLING
   font-size: 28px;
 }
 
-#modal-close {
+#modal-close, #modal-close-a {
   position: absolute;
   right: 10px;
   top: 5px;
@@ -251,7 +266,8 @@ MODAL STYLING
 }
 
 #modal-cancel,
-#modal-accept {
+#modal-accept, #modal-cancel-a,
+#modal-accept-a {
   margin-right: 20px;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
@@ -262,7 +278,7 @@ MODAL STYLING
   border-radius: 5px;
 }
 
-#modal-cancel:hover, #modal-accept:hover {
+#modal-cancel:hover, #modal-accept:hover, #modal-cancel-a:hover, #modal-accept-a:hover {
   cursor: pointer;
   color: #D73F09;
   background-color: #FDD26E;

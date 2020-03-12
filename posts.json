@@ -28,5 +28,19 @@
     "title": "hello",
     "bodytext": "what's up",
     "url": "https://i.pinimg.com/originals/4a/65/4d/4a654df898831ea007adea09106a446a.jpg"
+  },
+  {
+    "nsfw": "Tagged as NSFW",
+    "title": "a post",
+    "group": "random",
+    "bodytext": "don't mind me",
+    "url": ""
+  },
+  {
+    "nsfw": "",
+    "title": "tiny frog",
+    "group": "frogs",
+    "bodytext": "im crying",
+    "url": "https://i.redd.it/szkre5h6c7131.jpg"
   }
 ]

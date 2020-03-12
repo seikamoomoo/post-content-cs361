@@ -80,6 +80,7 @@ makepost.addEventListener('click', function(event){
    postRequest.open('POST', requestURL);
    var requestBody = JSON.stringify({
      title: title_input.value,
+     group: group_input.value,
      bodytext: body_input.value,
      url: url.value,
      nsfw: nsfw.value,
